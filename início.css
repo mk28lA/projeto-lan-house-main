@@ -5,12 +5,61 @@
 }
 
 :root {
---bg: #000;
---text: #EEE;
---card: #111;
---primary: #9932CC;
---danger: #BA55D3;
+  --bg: #060012;
+  --text: #EDEBFF;
+  --card: rgba(14, 10, 25, 0.65);
+  --card-solid: #0f0a1c;
+  --primary: #9932CC;
+  --danger: #BA55D3;
+
+  --neon-purple: #9932CC;
+  --neon-pink: #FF4FD8;
+
+  --ring: rgba(153, 50, 204, 0.55);
+  --ring2: rgba(255, 79, 216, 0.45);
+
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  --radius: 18px;
 }
+
+body {
+  background:
+    radial-gradient(1200px circle at 10% 10%, rgba(153, 50, 204, 0.22), transparent 60%),
+    radial-gradient(1000px circle at 90% 20%, rgba(255, 79, 216, 0.15), transparent 55%),
+    linear-gradient(135deg, #030009, #130024);
+}
+
+/* Acessibilidade (fonte/contraste/spacing/cursor) via classes no body */
+body[data-contrast="high"] {
+  --bg: #000;
+  --text: #fff;
+  --card: rgba(0, 0, 0, 0.78);
+  --card-solid: #000;
+  --primary: #D946FF;
+  --danger: #FF5BE7;
+}
+
+body[data-gray="1"] {
+  filter: grayscale(1);
+}
+
+body[data-font-scale="1.1"] {
+  font-size: 112.5%;
+}
+body[data-font-scale="0.95"] {
+  font-size: 95%;
+}
+
+body[data-letter-spacing="0.12em"] {
+  letter-spacing: 0.12em;
+}
+
+body[data-cursor="2"] {
+  cursor: larger;
+}
+
 
 body {
     font-family: 'Segoe UI', sans-serif;

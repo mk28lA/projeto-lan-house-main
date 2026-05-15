@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Play House - Lan House</title>
 <link rel="stylesheet" href="início.css">
+  <link rel="stylesheet" href="playhouse-home.css">
 </head>
 <body>
 
@@ -101,6 +102,222 @@
 </section>
 
 
+<!-- ================= PLAY HOUSE: TOP 10 JOGOS + PLANOS + PROGRESS ================= -->
+<section class="playhouse-home">
+  <div id="phTop10" class="ph-section-title">
+    <div>
+      <div class="ph-kicker">Top 10</div>
+      <h2 class="ph-h2">Jogos Mais Jogados</h2>
+    </div>
+  </div>
+
+  <div class="ph-card ph-carousel">
+    <button class="ph-carousel-btn ph-left" type="button" aria-label="Anterior">⟨</button>
+    <button class="ph-carousel-btn ph-right" type="button" aria-label="Próximo">⟩</button>
+
+    <div class="ph-carousel-viewport" style="overflow:hidden;">
+      <div class="ph-carousel-track" aria-live="off"></div>
+    </div>
+
+    <div class="ph-carousel-dots" aria-label="Indicadores" style="margin-top:12px;"></div>
+  </div>
+</section>
+
+<section class="playhouse-home">
+  <div class="ph-section-title">
+    <div>
+      <div class="ph-kicker">Planos</div>
+      <h2 class="ph-h2">Planos e Pagamentos</h2>
+    </div>
+  </div>
+
+  <div class="ph-grid-3">
+    <article class="ph-card ph-plan-card ph-neon-glow">
+      <div class="ph-plan-badge">Básico</div>
+      <div class="ph-price">R$ 8/hora</div>
+      <ul class="ph-list">
+        <li>1 console</li>
+        <li>Jogos ilimitados</li>
+      </ul>
+      <button class="ph-btn-neon" type="button">Escolher</button>
+      <div class="ph-payment-row">
+        <span class="ph-pay-pill">Pix</span>
+        <span class="ph-pay-pill">Visa</span>
+        <span class="ph-pay-pill">Mastercard</span>
+        <span class="ph-pay-pill">Elo</span>
+      </div>
+    </article>
+
+    <article class="ph-card ph-plan-card ph-neon-glow ph-plan-featured">
+      <div class="ph-plan-badge">Premium (Destaque)</div>
+      <div class="ph-price">R$ 12/hora</div>
+      <ul class="ph-list">
+        <li>Todos os consoles</li>
+        <li>Ambiente VIP</li>
+        <li>Suporte prioritário</li>
+      </ul>
+      <button class="ph-btn-neon" type="button">Escolher</button>
+      <div class="ph-payment-row">
+        <span class="ph-pay-pill">Pix</span>
+        <span class="ph-pay-pill">Visa</span>
+        <span class="ph-pay-pill">Mastercard</span>
+        <span class="ph-pay-pill">Elo</span>
+      </div>
+    </article>
+
+    <article class="ph-card ph-plan-card ph-neon-glow">
+      <div class="ph-plan-badge">Fidelidade</div>
+      <div class="ph-price">R$ 10/hora</div>
+      <ul class="ph-list">
+        <li>Sistema de bônus</li>
+        <li>Benefícios exclusivos</li>
+      </ul>
+      <button class="ph-btn-neon" type="button">Escolher</button>
+      <div class="ph-payment-row">
+        <span class="ph-pay-pill">Pix</span>
+        <span class="ph-pay-pill">Visa</span>
+        <span class="ph-pay-pill">Mastercard</span>
+        <span class="ph-pay-pill">Elo</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="phFidelidade" class="playhouse-home">
+  <div class="ph-section-title">
+    <div>
+      <div class="ph-kicker">Fidelidade</div>
+      <h2 class="ph-h2">Plano Fidelidade</h2>
+    </div>
+    <div class="ph-free-msg" style="display:none; color: var(--ph-pink); font-weight:900;">+1h grátis liberada!</div>
+  </div>
+
+  <div class="ph-card ph-progress-wrap ph-neon-glow ph-fade-in">
+    <div class="ph-bar"><span></span></div>
+    <div class="ph-level-line">
+      <div class="ph-level-dots">
+        <span class="ph-level-node is-done" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+        <span class="ph-level-node" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div style="margin-top:10px; color: rgba(255,255,255,0.85); font-weight:700;">
+      Jogue 10 horas e ganhe 1 hora grátis.
+    </div>
+    <div style="margin-top:12px; display:flex; gap:10px; justify-content:flex-start; flex-wrap:wrap;">
+      <button id="phAddHour" class="ph-btn-neon" type="button" style="width:auto;">+1h (demo)</button>
+      <a href="pagamento.html" class="btn" style="margin:0;">Ir para Pagamento</a>
+    </div>
+  </div>
+</section>
+
+<section id="phRpg" class="playhouse-home">
+  <div class="ph-section-title">
+    <div>
+      <div class="ph-kicker">HUD RPG</div>
+      <h2 class="ph-h2">Seu Progresso</h2>
+    </div>
+  </div>
+
+  <div class="ph-card ph-progress-wrap ph-neon-glow ph-fade-in">
+    <div style="display:grid; grid-template-columns: 1fr; gap:10px;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="padding:12px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:16px; background:rgba(0,0,0,0.18);">
+          <div style="font-size:12px; opacity:0.75;">Nível atual</div>
+          <div id="phLevel" style="font-size:30px; font-weight:900; color: var(--ph-pink);">1</div>
+        </div>
+        <div style="padding:12px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:16px; background:rgba(0,0,0,0.18);">
+          <div style="font-size:12px; opacity:0.75;">XP atual</div>
+          <div id="phXp" style="font-size:30px; font-weight:900; color: var(--ph-purple);">0</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="ph-bar"><span></span></div>
+      </div>
+
+      <div class="ph-level-dots" style="gap:14px; justify-content:flex-start; flex-wrap:wrap;">
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Novato</span>
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Explorador</span>
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Gamer Casual</span>
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Gamer Avançado</span>
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Gamer Pro</span>
+        <span class="ph-rpg-node ph-level-node" aria-hidden="true">Lenda</span>
+      </div>
+
+      <div style="color: rgba(255,255,255,0.85); font-weight:700;">
+        Horas jogadas, sessões e conquistas (visual).
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="phTestimonials" class="playhouse-home">
+  <div class="ph-section-title">
+    <div>
+      <div class="ph-kicker">Depoimentos</div>
+      <h2 class="ph-h2">O que os jogadores dizem</h2>
+    </div>
+  </div>
+
+  <div class="ph-card ph-neon-glow ph-fade-in" style="padding:18px;">
+    <button class="ph-test-prev" type="button" style="margin-right:10px;">⟨</button>
+    <button class="ph-test-next" type="button" style="margin-left:10px;">⟩</button>
+
+    <div style="overflow:hidden;">
+      <div class="ph-test-track" style="display:flex; transition: transform 0.5s ease;">
+        <div class="ph-test-item" style="min-width:100%; padding:10px;">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <div style="width:48px; height:48px; border-radius:999px; background:linear-gradient(135deg,var(--ph-purple),var(--ph-pink));"></div>
+            <div>
+              <div style="font-weight:900;">Ana</div>
+              <div style="color: #FFD54A; font-weight:900;">★★★★★</div>
+            </div>
+          </div>
+          <p style="margin-top:10px; color: rgba(255,255,255,0.88); font-weight:700;">Ambiente top, consoles novos e atendimento excelente!</p>
+        </div>
+
+        <div class="ph-test-item" style="min-width:100%; padding:10px;">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <div style="width:48px; height:48px; border-radius:999px; background:linear-gradient(135deg,var(--ph-pink),var(--ph-purple));"></div>
+            <div>
+              <div style="font-weight:900;">Bruno</div>
+              <div style="color: #FFD54A; font-weight:900;">★★★★★</div>
+            </div>
+          </div>
+          <p style="margin-top:10px; color: rgba(255,255,255,0.88); font-weight:700;">Melhor lugar para jogar com os amigos.</p>
+        </div>
+
+        <div class="ph-test-item" style="min-width:100%; padding:10px;">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <div style="width:48px; height:48px; border-radius:999px; background:linear-gradient(135deg,var(--ph-purple),var(--ph-pink));"></div>
+            <div>
+              <div style="font-weight:900;">Carla</div>
+              <div style="color: #FFD54A; font-weight:900;">★★★★★</div>
+            </div>
+          </div>
+          <p style="margin-top:10px; color: rgba(255,255,255,0.88); font-weight:700;">Plano fidelidade vale muito a pena.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ph-carousel-dots" style="margin-top:10px;" aria-label="Indicadores depoimentos">
+      <button class="ph-test-dot" type="button" aria-label="Depoimento 1"></button>
+      <button class="ph-test-dot" type="button" aria-label="Depoimento 2"></button>
+      <button class="ph-test-dot" type="button" aria-label="Depoimento 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FIM ================= -->
+
 
 <section>
     <h2>Escolha seu Console</h2>
@@ -188,4 +405,9 @@
 <p>© 2026 Power Games - Todos os direitos reservados</p>
 </footer>
 
-<script src="agenda.js"></script>\n<script src="script.js"></script>\n</body>\n</html>
+<script src="agenda.js"></script>
+<script src="index-ux.js"></script>
+<script src="playhouse-home.js"></script>
+</body>
+</html>
+
