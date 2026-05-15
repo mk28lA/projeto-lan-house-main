@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play House - Lan House</title>
+<link rel="stylesheet" href="início.css">
+</head>
+<body>
+
+
+<header>
+    <div class="logo">Play House</div>
+
+    <div class="header-icons">
+        <button id="darkModeToggle">🌙</button>
+        <div class="menu">
+            <button id="menuBtn">⋮</button>
+<div class="dropdown" id="dropdownMenu">
+<a href="sobre.html" class="btn">Conheça Nosso Projeto</a>
+                <a href="sobre.html">LGPD</a>
+                <a href="#">Contato</a>
+                <a href="#">Login</a>
+                <a href="fidalidade.html">Ver Meu Progresso</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Pesquisar jogo...">
+</div>
+
+
+<section>
+    <h2>Agendar Horário</h2>
+<section class="agenda">
+    <h2>Agendar</h2>
+
+    <div class="agenda-container">
+
+        <!-- ESQUERDA -->
+        <div class="agenda-left">
+<select id="console" onchange="carregarJogos()">
+                <option value="">Escolha o Console</option>
+                <option value="ps1">PlayStation 1</option>
+                <option value="ps2">PlayStation 2</option>
+                <option value="ps3">PlayStation 3</option>
+                <option value="ps4">PlayStation 4</option>
+                <option value="ps5">PlayStation 5</option>
+                <option value="xbox360">Xbox 360</option>
+                <option value="pc">PC</option>
+                <option value="psp">PSP</option>
+                <option value="Atari">Atari</option>
+            </select>
+
+<select id="jogo">
+                <option value="">Escolha o Jogo</option>
+            </select>
+        </div>
+
+        <!-- DIREITA -->
+        <div class="agenda-right">
+            <input type="date" id="data">
+            <input type="time" id="hora">
+
+            <div id="preview"></div>
+        </div>
+
+    </div>
+
+<button class="btn-agendar" onclick="agendar()">Agendar</button>
+
+        <ul id="lista-agendamentos"></ul>
+    </section>
+</section>
+
+
+<section>
+    <h2>⚠ Jogos Indisponíveis</h2>
+
+    <div class="games-unavailable">
+
+        <div class="game-card unavailable">
+            <img src="imgs/games/gta6.png" alt="GTA VI">
+            <span>GTA V</span>
+        </div>
+
+        <div class="game-card unavailable">
+            <img src="imgs/games/eafc26.png" alt="EA Sports FC 26">
+            <span>EA FC 24</span>
+        </div>
+
+        <div class="game-card unavailable">
+            <img src="imgs/games/codbo.png" alt="Call of Duty">
+            <span>Call of Duty</span>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section>
+    <h2>Escolha seu Console</h2>
+
+    <div class="consoles">
+
+                 <div class="console-card">
+            <a href="Atari.html">        
+             <img src="imgs/ATARI.png" alt="Atari"></a>
+            <h3>Atari</h3>
+        </div>
+
+        <div class="console-card">
+            <a href="pc.html">        
+             <img src="imgs/PC.png" alt="PC"></a>
+            <h3>PC Gamer</h3>
+        </div>   
+        
+        <div class="console-card">
+            <a href="play1.html">
+                <img src="imgs/Play1.png" alt="PS1"></a>
+            <h3>PlayStation 1</h3>
+        </div>
+        
+        <div class="console-card">
+            <a href="play2.html">
+             <img src="imgs/Play2.png" alt="PS2"></a>
+            <h3>PlayStation 2</h3>
+        </div>
+        
+        <div class="console-card">
+            <a href="play3.html">            
+             <img src="imgs/Play3.png" alt="PS3"></a>
+            <h3>PlayStation 3</h3>
+        </div>
+         
+        <div class="console-card">
+            <a href="play4.html">
+             <img src="imgs/Play4.png" alt="PS4"></a>
+            <h3>PlayStation 4</h3>
+        </div>
+        
+        <div class="console-card">
+            <a href="play5.html">            
+             <img src="imgs/Play5.png" alt="PS5"></a>
+            <h3>PlayStation 5</h3>
+        </div>
+
+
+
+         <div class="console-card">
+            <a href="Psp.html">        
+             <img src="imgs/PSP.png" alt="Psp Portable"></a>
+            <h3>Psp Portable</h3>
+        </div>
+
+
+        <div class="console-card">
+            <a href="xbox360.html">            
+            <img src="imgs/Xbox360.png" alt="Xbox360"></a>
+            <h3>Xbox 360</h3>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section>
+    <h2>Plano Fidelidade</h2>
+    <p>Jogue 10 horas e ganhe 1 hora grátis.</p>
+<a href="pagamento.html" class="btn">Ir para Pagamento</a>
+</section>
+
+
+<footer>
+    <p>📍 Localização: Caririaçu - Brasil</p>
+    <p>📸 Instagram: @powergames</p>
+    <p>📱 WhatsApp: (00) 00000-0000</p>
+<div class="footer-links">
+<a href="termos.html" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Termos</a>
+<a href="sobre.html" style="color: var(--primary); text-decoration: none; margin: 0 10px;">LGPD</a>
+<a href="fidalidade.html" style="color: var(--primary); text-decoration: none;">Fidelidade</a>
+</div>
+<p>© 2026 Power Games - Todos os direitos reservados</p>
+</footer>
+
+<script src="agenda.js"></script>\n<script src="script.js"></script>\n</body>\n</html>

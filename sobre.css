@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+--bg: #000;
+--text: #EEE;
+--card: #111;
+--primary: #9932CC;
+--danger: #BA55D3;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: 0.4s;
+}
+
+main {
+    padding-bottom: 40px;
+}
+
+.sobre-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.sobre-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: var(--text);
+}
+
+.btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,200,83,0.3);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0,200,83,0.4);
+}
+
+.bloco {
+    background: var(--card);
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    transition: all 0.3s ease;
+}
+
+.bloco:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.bloco h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--text);
+}
+
+.bloco p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.bloco ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bloco ul li {
+    margin-bottom: 12px; 
+    color: var(--danger);
+    font-weight: 600;
+    padding: 8px 0 8px 25px; 
+    position: relative;
+
+}
+
+.bloco ul li::before {
+    content: '⚡'; 
+    position: absolute;
+    left: 0;
+color: #9932CC;
+    font-size: 14px;
+}
+
+.origem {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.origem .texto {
+    flex: 1;
+}
+
+.origem .imagem {
+    flex: 1;
+}
+
+.origem .imagem img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.origem .imagem img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+    .sobre-container {
+        padding: 40px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .origem {
+        flex-direction: row;
+        align-items: flex-start; 
+    }
+
+    .sobre-container h1 {
+        font-size: 36px; 
+    }
+
+    .bloco {
+        padding: 35px; 
+    }
+}

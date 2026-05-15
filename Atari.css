@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+background-color: #000;
+    color: white;
+}
+
+header {
+    background: #8B008B;\n    padding: 20px;\n    text-align: center;\n}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {\n    background: #111;\n    border-radius: 10px;\n    overflow: hidden;\n    text-align: center;\n    transition: 0.3s;\n    cursor: pointer;\n}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {\n    background: #9932CC;\n    color: white;\n    border: none;\n    padding: 8px 15px;\n    margin: 2px;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: 0.3s;\n}
+
+.pagination button:hover {
+    background: #8b0000;
+}
+
+.pagination button.active {
+    background: #8b0000;
+}
+
+
+
+
+
+

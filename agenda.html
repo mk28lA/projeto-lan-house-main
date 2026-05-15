@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Gamer</title>
+    <link rel="stylesheet" href="agenda.css">
+</head>
+<body>
+
+     <a href="início.html" class="btn">🏠︎</a>
+
+<div class="agenda-container">
+    <h1>🎮 Agenda Gamer</h1>
+
+    <div class="form-agenda">
+
+        <select id="console" onchange="carregarJogos()">
+            <option value="">Escolha o Console</option>
+            <option value="Atari">Atari</option>
+            <option value="ps1">PlayStation 1</option>
+            <option value="ps2">PlayStation 2</option>
+            <option value="ps3">PlayStation 3</option>
+            <option value="ps4">PlayStation 4</option>
+            <option value="ps5">PlayStation 5</option>
+            <option value="xbox360">Xbox 360</option>
+            <option value="pc">PC</option>
+            <option value="psp">PSP</option>
+
+        </select>
+
+        <select id="jogo">
+            <option value="">Escolha o Jogo</option>
+        </select>
+
+        <input type="date" id="data">
+        <input type="time" id="hora">
+
+        <button onclick="adicionarAgendamento()">Agendar</button>
+
+    </div>
+
+    <ul id="lista-agendamentos"></ul>
+</div>
+
+<script src="agenda.js"></script>
+</body>
+</html>

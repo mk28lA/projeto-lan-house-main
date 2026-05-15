@@ -1,0 +1,150 @@
+:root {
+  --bg: #000;
+  --text: #EEE;
+  --card: #111;
+  --primary: #9932CC;
+  --purple-hover: #8B008B;
+  --accent: #BA55D3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: var(--primary);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(153,50,204,0.4);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--purple-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(153,50,204,0.6);
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--purple-hover));
+  padding: 25px;
+  text-align: center;
+  margin-top: 60px; /* space for fixed btn */
+}
+
+header h1 {
+  font-size: 2.2em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+#pesquisa {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#pesquisa::placeholder {
+  color: #888;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.4s;
+  cursor: pointer;
+  border: 1px solid rgba(153,50,204,0.2);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(153,50,204,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 18px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  min-width: 45px;
+}
+
+.pagination button:hover {
+  background: var(--purple-hover);
+}
+
+.pagination button.active {
+  background: var(--accent);
+  box-shadow: 0 4px 12px rgba(186,85,211,0.4);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+  }
+  
+  .container {
+    padding: 20px 15px;
+  }
+}
