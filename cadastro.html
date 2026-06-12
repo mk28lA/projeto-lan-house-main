@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play House - Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+  <header class="ph-header">
+    <div class="logo">Play House</div>
+    <nav>
+      <a class="ph-link" href="index.html">Início</a>
+      <a class="ph-link" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card-top">
+        <div class="title-wrap">
+          <!-- cspell:ignore Cadastro -->
+          <h1>📝 Cadastro</h1>
+          <p class="subtitle">Crie sua conta e entre para o próximo nível</p>
+        </div>
+        <div class="neon-chip" aria-hidden="true">PLAY HOUSE // ACCOUNT</div>
+      </div>
+
+      <form id="cadastroForm" class="form" onsubmit="return false;">
+        <div class="grid">
+          <label class="field">
+            <span>Nome completo</span>
+            <input id="nome" type="text" placeholder="Seu nome" autocomplete="name" />
+          </label>
+
+          <label class="field">
+            <span>Nome de usuário (nickname gamer)</span>
+            <input id="usuario" type="text" placeholder="ex: joao123" autocomplete="username" />
+          </label>
+
+          <label class="field">
+            <span>E-mail</span>
+            <input id="email" type="email" placeholder="voce@email.com" autocomplete="email" />
+          </label>
+
+          <label class="field">
+            <span>Telefone / WhatsApp</span>
+            <input id="telefone" type="tel" placeholder="(11) 99999-9999" inputmode="tel" autocomplete="tel" />
+          </label>
+
+          <label class="field">
+            <span>CPF</span>
+            <input id="cpf" type="text" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span>Data de nascimento</span>
+            <input id="nascimento" type="date" />
+          </label>
+        </div>
+
+        <div class="grid grid-2">
+          <label class="field">
+            <span>Senha</span>
+            <div class="password-wrap">
+              <input id="senha" type="password" placeholder="••••••••" autocomplete="new-password" />
+              <button class="icon-btn" type="button" id="toggleSenha" aria-label="Mostrar senha">👁</button>
+            </div>
+            <div class="strength" aria-live="polite">
+              <div class="strength-row">
+                <span class="strength-label">Força da senha</span>
+                <span class="strength-value" id="strengthText">—</span>
+              </div>
+              <div class="strength-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="strength-fill" id="strengthBar"></div>
+              </div>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Confirmar senha</span>
+            <div class="password-wrap">
+              <input id="senha2" type="password" placeholder="••••••••" autocomplete="new-password" />
+              <button class="icon-btn" type="button" id="toggleSenha2" aria-label="Mostrar confirmar senha">👁</button>
+            </div>
+          </label>
+        </div>
+
+        <div class="section-title">Extras do cadastro</div>
+        <div class="checks">
+          <label class="check">
+            <input id="termos" type="checkbox" />
+            <span>Aceito os termos de uso</span>
+          </label>
+          <label class="check">
+            <input id="promos" type="checkbox" />
+            <span>Quero receber promoções e novidades</span>
+          </label>
+        </div>
+
+        <div class="section-title">Escolha seu avatar gamer (opcional)</div>
+        <input type="hidden" id="avatar" value="" />
+        <div class="avatar-grid" role="list" aria-label="Selecione um avatar">
+          <button type="button" class="avatar" data-avatar="nova" aria-label="Avatar Nova" role="listitem">
+            <span class="avatar-dot nova"></span>
+            <span class="avatar-name">NOVA</span>
+          </button>
+          <button type="button" class="avatar" data-avatar="neon" aria-label="Avatar Neon" role="listitem">
+            <span class="avatar-dot neon"></span>
+            <span class="avatar-name">NEON</span>
+          </button>
+          <button type="button" class="avatar" data-avatar="ghost" aria-label="Avatar Ghost" role="listitem">
+            <span class="avatar-dot ghost"></span>
+            <span class="avatar-name">GHOST</span>
+          </button>
+          <button type="button" class="avatar" data-avatar="viper" aria-label="Avatar Viper" role="listitem">
+            <span class="avatar-dot viper"></span>
+            <span class="avatar-name">VIPER</span>
+          </button>
+          <button type="button" class="avatar" data-avatar="rookie" aria-label="Avatar Rookie" role="listitem">
+            <span class="avatar-dot rookie"></span>
+            <span class="avatar-name">ROOKIE</span>
+          </button>
+        </div>
+
+        <div class="section-title">Plano</div>
+        <div class="plan-grid" role="radiogroup" aria-label="Selecione um plano">
+          <label class="plan">
+            <input type="radio" name="plano" value="básica" checked />
+            <span class="plan-title">Conta Básica</span>
+            <span class="plan-desc">Acesso essencial</span>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plano" value="premium" />
+            <span class="plan-title">Conta Premium</span>
+            <span class="plan-desc">Benefícios extras</span>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plano" value="vip" />
+            <span class="plan-title">VIP Gamer</span>
+            <span class="plan-desc">Prioridade + perks</span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="cadastrar()">Criar Conta</button>
+          <button class="btn btn-secondary" type="button" onclick="window.location.href='login.html'">Já tenho uma conta</button>
+          <p class="small">Ao cadastrar, você concorda com os <a href="termos.html" target="_blank" rel="noreferrer">Termos</a>.</p>
+        </div>
+      </form>
+
+      <div id="msg" class="msg" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+
+  <script src="cadastro.js"></script>
+</body>
+</html>
+

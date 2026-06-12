@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play House - Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header class="ph-header">
+    <div class="logo">Play House</div>
+    <nav>
+      <a class="ph-link" href="index.html">Início</a>
+      <a class="ph-link" href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>🔐 Login</h1>
+      <p class="subtitle">Entre com seu usuário e senha (demo).</p>
+
+      <form id="loginForm" class="form" onsubmit="return false;">
+        <label class="field">
+          <span>Usuário ou email</span>
+          <input id="login" type="text" placeholder="ex: joao123 ou voce@email.com" autocomplete="username" />
+        </label>
+
+        <label class="field">
+          <span>Senha</span>
+          <input id="senha" type="password" placeholder="••••••••" autocomplete="current-password" />
+        </label>
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="fazerLogin()">Entrar</button>
+          <button class="btn btn-secondary" type="button" onclick="limparSessao()">Sair (limpar)</button>
+          <p class="small">Não tem conta? <a href="cadastro.html">Cadastre-se</a>.</p>
+        </div>
+      </form>
+
+      <div id="msg" class="msg" role="status" aria-live="polite"></div>
+
+      <div class="logged" id="loggedPanel" style="display:none;">
+        <p><strong>Você está logado.</strong></p>
+        <a class="ph-link" href="index.html" style="display:inline-block; margin-top:8px;">Ir para o site</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
+

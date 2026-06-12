@@ -149,6 +149,120 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* ================= AO VIVO ================= */
+.ph-live {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* layout da luazinha (live) */
+@media (min-width: 860px) {
+  #phLive .ph-live {
+    grid-template-columns: 1.2fr 0.8fr !important; /* esquerda iframe, direita controles */
+  }
+}
+
+
+.ph-live .ph-live-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ph-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.22);
+  font-weight: 900;
+  color: rgba(255,255,255,0.95);
+}
+
+.ph-live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  box-shadow: 0 0 18px rgba(255,79,216,0.55);
+}
+
+.ph-live-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.ph-live-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#phLiveUrlInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  outline: none;
+}
+
+#phLiveLoadBtn {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#phLiveLoadBtn:hover {
+  box-shadow: 0 0 28px rgba(153,50,204,0.35), 0 0 22px rgba(255,79,216,0.20);
+}
+
+#phLiveStatus {
+  font-weight: 800;
+  color: rgba(255,255,255,0.9);
+}
++
++#phLiveStatus[data-type="error"] {
++  color: var(--danger);
++}
++
++#phLiveStatus[data-type="ok"] {
++  color: #66ffcc;
++}
++
++#phLiveIframeWrap {
++  border-radius: 15px;
++  border: 1px solid rgba(255,255,255,0.12);
++  background: rgba(0,0,0,0.20);
++  overflow: hidden;
++}
++
++#phLiveIframe {
++  display: block;
++  width: 100%;
++  height: auto;
++  aspect-ratio: 16 / 9;
++  border: 0;
++}
++
++@media (min-width: 860px) {
++  .ph-live-grid {
++    grid-template-columns: 1fr;
++  }
++}
+
+
 section h2 {
     margin-bottom: 10px;
 }
